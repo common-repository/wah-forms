@@ -1,0 +1,57 @@
+//compileCompressed: wahforms.css
+
+$white: #FFFFFF;
+$black: #000000;
+$red: #9E2B25;
+$alert: #ff0000;
+$danger: #f14668;
+$success: #237a53;
+$info : #3e8ed0;
+$blue: #1D3354;
+$light_blue: #467599;
+
+.wahforms-required-field {
+    border: 2px solid $danger !important;
+}
+.required-message {
+    font-size: 14px;
+    color: $danger;
+}
+.wf-controls {
+    .error-message {
+        color: $alert;
+        margin: 0;
+        font-size: 15px;
+    }
+}
+.wahforms-form {
+    position: relative;
+    &.loading {
+        &:before {
+            position: absolute;
+            content:'';
+            z-index: 99999;
+            background: rgba(255,255,255,0.8) url(../../admin/images/loader.gif) no-repeat bottom center;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.wahforms-ajax-response{
+    .wahforms-ajax-success {
+        font-size: 16px;
+        display: block;
+        padding: 5px;
+        color: $success;
+        border:2px solid $success;
+    }
+    .wahforms-ajax-error {
+        font-size: 16px;
+        display: block;
+        padding: 5px;
+        color: $alert;
+        border:2px solid $alert;
+    }
+}
